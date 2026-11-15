@@ -1,7 +1,9 @@
-/* Webflow host fixes: neutralize webflow.css and legacy site defaults inside the redesign root. */
+/* Webflow host fixes: neutralize webflow.css, legacy site styles and injected site scripts around the redesign root. */
+html body{background-color:#f2f5f6;color:inherit}
 .st-root{display:block}
 .w-embed:has(>.st-root){display:block}
 .st-form-wrap{margin:0}
-.st-form-done,.st-form-fail{padding:16px 18px;border-radius:12px;margin-top:14px;font-size:15px;line-height:1.5}
-.st-form-done{background:#e7f3ee;color:#12283a}
-.st-form-fail{background:#fbeaea;color:#5a1f1f}
+.st-root .w-form-done.st-form-done,.st-root .w-form-fail.st-form-fail{padding:16px 18px!important;border-radius:12px!important;margin-top:14px!important;font-size:15px!important;line-height:1.5!important;border:0!important;box-shadow:none!important;text-align:left!important}
+.st-root .w-form-done.st-form-done{background:#e7f3ee!important;color:#12283a!important}
+.st-root .w-form-fail.st-form-fail{background:#fbeaea!important;color:#5a1f1f!important}
+.st-root .w-form-done.st-form-done p,.st-root .w-form-fail.st-form-fail p{color:inherit!important;margin:0!important}
