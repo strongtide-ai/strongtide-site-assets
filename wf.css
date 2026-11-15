@@ -1,5 +1,5 @@
 /* Webflow host fixes: neutralize webflow.css, legacy site styles and injected site scripts around the redesign root. */
-html body{background-color:#f2f5f6;color:inherit}
+html body{background-color:#f2f5f6}
 .st-root{display:block}
 .w-embed:has(>.st-root){display:block}
 .st-form-wrap{margin:0}
