@@ -1,0 +1,7 @@
+/* Webflow host fixes: neutralize webflow.css and legacy site defaults inside the redesign root. */
+.st-root{display:block}
+.w-embed:has(>.st-root){display:block}
+.st-form-wrap{margin:0}
+.st-form-done,.st-form-fail{padding:16px 18px;border-radius:12px;margin-top:14px;font-size:15px;line-height:1.5}
+.st-form-done{background:#e7f3ee;color:#12283a}
+.st-form-fail{background:#fbeaea;color:#5a1f1f}
