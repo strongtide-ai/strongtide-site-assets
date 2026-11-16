@@ -2870,6 +2870,35 @@ main.play .page-hero h1.play-title { font-size: clamp(40px, 5.4vw, 88px); line-h
 @media (max-width: 760px) { .play .cz-flow { grid-template-columns: 1fr; gap: 18px; } }
 .cz-nw { white-space: nowrap; }
 
+/* ---------- mobile menu ---------- */
+.nav-cta { display: none; }
+@media (max-width: 900px) {
+  .menu-btn { cursor: pointer; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+  .site-head.open, .home .site-head.open { background: var(--ground); border-bottom-color: var(--line); }
+  .site-head.open .nav {
+    display: flex; flex-direction: column; gap: 0; margin: 0;
+    position: absolute; top: 100%; left: 0; right: 0;
+    height: calc(100vh - 76px); height: calc(100dvh - 76px);
+    overflow-y: auto; overscroll-behavior: contain;
+    padding: 8px 24px calc(32px + env(safe-area-inset-bottom));
+    background: var(--ground);
+  }
+  .site-head.open .nav a {
+    font: 400 30px/1.15 var(--serif); letter-spacing: -0.01em;
+    padding: 18px 0; border-bottom: 1px solid var(--line);
+  }
+  .site-head.open .nav a::after { display: none; }
+  .site-head.open .nav a[aria-current="page"] { color: var(--tide-deep); }
+  .site-head.open .nav .nav-cta {
+    display: inline-flex; align-items: center; justify-content: center; align-self: stretch;
+    margin-top: 28px; min-height: 54px; padding: 0 24px; border: 0; border-radius: 999px;
+    font: 600 17px var(--sans); letter-spacing: 0;
+    color: #fff; background: var(--ink);
+  }
+  .site-head.open .menu-btn { box-shadow: inset 0 0 0 1.5px var(--ink); }
+  html.menu-open, html.menu-open body { overflow: hidden; }
+}
+
 /* ---------- round 4: articles (Resources notes) ----------
    Markup from tools/render_articles.py. Photo openers set the title in the photo's sky with the byline on the
    deep field below; type openers sit on the deep field; every note closes in type on one ink field. */
